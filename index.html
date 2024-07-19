@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <title>Text to QR</title>
+    <link rel="stylesheet" href="./input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-cover bg-center bg-no-repeat h-screen flex justify-center items-center overflow-y-auto" style="background-image: url('./assects/bg.jpg');">
+    <section class="flex flex-col-reverse sm:flex-row gap-2 justify-evenly items-center w-full h-full p-4">
+        <div class="bg-[#ffffff47] bg-opacity-80 p-6 rounded-xl flex flex-col justify-center items-center shadow-lg max-w-md">
+            <h3 class="font-bold text-2xl mb-4">Enter your text or URL</h3>
+            <input 
+            id="userInput" 
+            class="outline-none h-12 w-full p-4 mb-4 rounded-xl border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200" 
+            type="text" 
+            placeholder="Text or URL"
+            autocomplete="off"
+            />
+            <div class="mb-2 flex items-center gap-2 w-full">
+                <h3 class="font-bold text-lg">Size:</h3>
+                <select id="sizeSelect" class="rounded-lg p-2 border border-gray-300">
+                    <option value="100">100 x 100</option>
+                    <option value="150" selected>150 x 150</option>
+                    <option value="200">200 x 200</option>
+                    <option value="250">250 x 250</option>
+                    <option value="300">300 x 300</option>
+                </select>
+            </div>
+            <div id="cont" class="flex flex-col gap-2 justify-center items-center w-full py-2 hidden">
+                <div id="loading" class=" flex justify-center items-center mb-4">
+                    <div class="loader"></div>
+                </div>
+                <div id="imgBox" class="flex flex-col gap-5 justify-center items-center mb-2 w-full hidden">
+                    <img class="bg-white p-3 rounded-2xl shadow-lg shadow-[#1e1e1e]" id="QRcodeImg" src="" class="max-w-full max-h-full" />
+                    <button 
+                        id="saveImage" 
+                        class="outline-none h-12 w-full rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold"
+                        onclick="saveQR()"
+                    >Save image</button>
+                </div>
+            </div>
+            <button 
+                id="generateBtn" 
+                class="outline-none h-12 w-full p-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold"
+                onclick="generateQR()"
+            >Generate QR</button>
+        </div>
+        <div class="hidden sm:block">
+            <img src="./assects/qr-img-2.png" class="w-64 h-64 sm:w-96 sm:h-96">
+        </div>
+    </section>
+    <script src="./script.js"></script>
+</body>
+</html>
