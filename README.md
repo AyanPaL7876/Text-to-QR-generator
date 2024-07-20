@@ -4,6 +4,8 @@
 
 This project allows users to generate QR codes from text or URLs. Users can input text or a URL, select the size of the QR code, and generate it. The generated QR code can also be downloaded.
 
+<br> Live : [**Demo**](https://AyanPaL7876.github.io/Text-to-QR-generator/) 
+
 ## 🛠️ Features
 
 - **Responsive Design**: The UI adjusts for different screen sizes.
@@ -36,13 +38,3 @@ This project allows users to generate QR codes from text or URLs. Users can inpu
 - **Name**: Ayan Pal
 - **GitHub**: [AyanPaL7876](https://github.com/AyanPaL7876)
 
-
-
-A simple QR Code generator. Made using HTML 5, Tailwind CSS &amp; Js !! 
-
-![Languages](https://skillicons.dev/icons?i=html,css,tailwind,js)
-
----------------------------------------------
-  Live Demo [**live**](https://AyanPaL7876.github.io/Text-to-QR-generator/) 
-
----------------------------------------------
